@@ -17,6 +17,6 @@ cache/
 
 
 # Ignore specific files in different folders
-# /pages/test.php
 # /classes/temp.php
 # /assets/js/debug.js
+/pages/test.php
