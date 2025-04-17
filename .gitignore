@@ -19,4 +19,4 @@ cache/
 # Ignore specific files in different folders
 # /classes/temp.php
 # /assets/js/debug.js
-/pages/test.php
+/extra
