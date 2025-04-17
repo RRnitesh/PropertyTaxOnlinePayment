@@ -1,0 +1,22 @@
+# Ignore environment files
+.env
+
+# Ignore Composer's vendor folder
+/vendor/
+
+# Ignore OS junk files
+Thumbs.db
+
+# Ignore PHPStorm / VSCode settings 
+/.idea/
+/.vscode/
+
+# Ignore logs and cache (optional, but good practice)
+*.log
+cache/
+
+
+# Ignore specific files in different folders
+# /pages/test.php
+# /classes/temp.php
+# /assets/js/debug.js
