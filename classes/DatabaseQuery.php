@@ -29,6 +29,30 @@ class DataBaseQuery extends DbConnection{
     }
     return $data;
   }
+
+  public function insertData($query, $parameter = [], $types = "") {  
+    $stmt = $this->conn->prepare($query);
+
+    if (!$stmt) {
+        throw new \Exception("Prepare failed: " . $this->conn->error);
+    }
+
+    if (!empty($parameter)) {
+        $stmt->bind_param($types, ...$parameter);
+    }
+
+    $success = $stmt->execute();
+
+    if (!$success) {
+        throw new \Exception("Execute failed: " . $stmt->error);
+    }
+
+    $insertId = $stmt->insert_id;
+    $stmt->close();
+
+    return $insertId;
+}
+
 }
 ?>
 

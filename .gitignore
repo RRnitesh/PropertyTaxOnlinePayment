@@ -20,3 +20,7 @@ cache/
 # /classes/temp.php
 # /assets/js/debug.js
 /extra
+
+
+#ignore home
+/assets/js/indexPage/home.js
