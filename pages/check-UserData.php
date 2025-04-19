@@ -87,15 +87,16 @@ try {
     ];
 
     //Send OTP
-    $mailer = new SendMail();
-    $otpManager = new OTPManager($mailer);
-    $response = $otpManager->sendOTP($userInfo['email']);
+    // $mailer = new SendMail();
+    // $otpManager = new OTPManager($mailer);
+    // $response = $otpManager->sendOTP($userInfo['email']);
 
-    if ($response['status'] === true) {
-        new APIResponse(true, $response['message']);
-    } else {
-        new APIResponse(false, $response['message'], $response['errorDetails']);
-    }
+    // if ($response['status'] === true) {
+    //     new APIResponse(true, $response['message']);
+    // } else {
+    //     new APIResponse(false, $response['message'], $response['errorDetails']);
+    // }
+    new APIResponse(true, 'good');
 
 } catch (Exception $e) {
     new APIResponse(false, "System error: " . $e->getMessage());
