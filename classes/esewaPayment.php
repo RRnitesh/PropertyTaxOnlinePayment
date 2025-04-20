@@ -59,4 +59,6 @@ class EsewaPayment{
   }
 }
 
+$dv = new EsewaPayment(500);
+echo ($dv->generateForm("abc","xyz"));
 ?>
