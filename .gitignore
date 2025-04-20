@@ -23,4 +23,4 @@ cache/
 
 
 #ignore home
-/assets/js/indexPage/home.js
+#/assets/js/indexPage/home.js

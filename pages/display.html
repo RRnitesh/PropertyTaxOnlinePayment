@@ -4,7 +4,137 @@
   <meta charset="UTF-8">
   <title>Land & Building Info</title>
   <link rel="stylesheet" href="../assets/css/displaylandDetails.css">
-  <script src="../assets/js/displayPage/main.js" type="module"></script>
+  <script src="../assets/js/displayPage/program.js" ></script>
+  <style>
+    /* displaylandDetails.css */
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* Headings */
+h1, h2 {
+  color: #1a237e;
+  border-bottom: 2px solid #1a237e;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+/* User Info Box */
+#user-info {
+  background: #e8f0fe;
+  padding: 15px;
+  border: 1px solid #90caf9;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+/* Table Header - Clear and Sharp */
+table thead {
+  background-color: #1a237e;
+  color:black;
+  opacity: 1;           /* Make sure there's no fading */
+  font-weight: bold;
+}
+
+#tax-table th {
+  background-color: #0d47a1;
+  color: #ffffff;
+  opacity: 1;           /* Remove any transparency */
+  font-weight: bold;
+}
+
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+table tbody tr:hover {
+  background-color: #e3f2fd;
+}
+
+/* Hidden Table Styling (when shown) */
+#totalcost, #tax-table {
+  background: #ffffff;
+  border: 1px solid #90caf9;
+}
+
+#tax-table th {
+  background-color: #0d47a1;
+}
+
+#total-amount {
+  background-color: #e8f5e9;
+  border: 1px solid #4caf50;
+  padding: 10px;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* Buttons */
+button, .pay-esewa {
+  background-color: #1565c0;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, .pay-esewa:hover {
+  background-color: #0d47a1;
+}
+
+button:disabled {
+  background-color: #b0bec5;
+  cursor: not-allowed;
+}
+
+/* Hidden Payment Form */
+#hiddenPaymentForm {
+  margin-top: 20px;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  table th, table td {
+    font-size: 14px;
+  }
+
+  button, .pay-esewa {
+    width: 100%;
+  }
+}
+
+  </style>
 </head>
 <body>
 
@@ -32,10 +162,11 @@
   <h2>Building Details</h2>
   <div id="building-tables"></div>
 
-  <!-- <button id="calculate" onclick="Calculate()">calculate</button> -->
+  <button id="calculate" onclick="Calculate()">calculate</button>
 
-  <button id="calculate">calculate</button>
+  <!-- <button id="calculate">calculate</button> -->
   <div id="result">
+
     <table style="display: none;" id="totalcost">
       <tr>
         <th>land valution</th>
